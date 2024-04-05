@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>West Coast Adventure Tours</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+        <!-- Homepage content goes here -->
+        <h1>Welcome to West Coast Adventure Tours</h1>
+        <!-- Navigation -->
+        <div class="navigation">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="tour1.jpg" style="width:100%">
+            <div class="text">Tour 1: Hiking in the Rockies</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="tour2.jpg" style="width:100%">
+            <div class="text">Tour 2: Kayaking in Coastal Waters</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="tour3.jpg" style="width:100%">
+            <div class="text">Tour 3: Wildlife Watching in National Parks</div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <button class="booking-button">Book Your Adventure</button>
+
+    <div id="map"></div>
+    
+    <script src="script.js"></script>
+    <script>
+        // JavaScript code for homepage
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+        }
+
+        // Initialize and add the map
+        function initMap() {
+            var mapOptions = {
+                center: { lat: 49.2827, lng: -123.1207 },
+                zoom: 8
+            };
+            var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+        }
+    </script>
+</body>
+</html>

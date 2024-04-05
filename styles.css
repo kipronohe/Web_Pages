@@ -1,0 +1,122 @@
+/* styles.css */
+
+/* CSS styles for all pages */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+h1 {
+    color: #007bff;
+}
+/* Additional styles for homepage */
+h1{
+    text-align: center; 
+}
+.navigation {
+    text-align: center; /* Center-align the navigation */
+    margin-top: 70px;
+    padding: 60px; /* Add some space below the navigation */
+}
+.navigation a {
+    margin: 0 10px; /* Add spacing between navigation links */
+    text-decoration: none; /* Remove underline from links */
+    color: #007bff; /* Set link color */
+    font-weight: bold; /* Set link font weight */
+    transition: color 0.3s; /* Smooth transition for link color change */
+}
+.navigation a:hover {
+    color: #0056b3; /* Change link color on hover */
+}
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+}
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.dot-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.booking-button {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.booking-button:hover {
+    background-color: #0056b3;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+}
+/* Add more CSS styles as needed */
